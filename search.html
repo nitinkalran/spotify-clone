@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="spotify.html">
+    <title>search songs</title>
+    <style>
+        body{
+            background-image: url(music.jpg);
+            background-size: cover;
+
+        }
+        .contain{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+        }
+        .search{
+            display:flex;
+            width:350px;
+            height:34px;
+            margin-top:45px;
+            border-radius:20px;
+            border:2px solid white;
+            background-color: white;
+            
+            box-shadow: yellowgreen 4px 4px;
+            animation-name: s;
+        }
+        .btn{
+            height:40px;
+            margin-top:45px;
+            border-radius:15px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="contain">
+    <input CLASS="search" type="text" name="search" id="searchText" placeholder="SEARCH">
+    <button  class='btn' onclick="searchForText()">Search</button>
+    </div>
+    <script>
+        var h2Text = document.querySelector('div.card > h2').textContent;
+        console.log(h2Text)
+    </script>
+</body>
+</html>

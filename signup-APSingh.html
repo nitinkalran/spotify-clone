@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sign up - Spotify</title>
+
+  <link rel="icon" type="image" href="../icons/favico.ico">
+
+  <link rel="stylesheet" href="signup copy.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="utility.css">
+  <script src="https://kit.fontawesome.com/2a9cc83bd0.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <body>
+    <header class="header">
+      <!-- <a herf="#" class="logo">Port<span>folio.</span> </a> -->
+      <img class="invert" src="../svg/logo.svg" alt="">
+
+    </header>
+
+
+    <div class="fir">
+      <h1>Sign up to Start listening</h1>
+      <p class="pos2">Email address</p>
+      <div class="yoo1">
+        <input id="email" placeholder="name@domin.com" type="text" name="" value="">
+      </div>
+      <p><a class="sup" href="phone-APSingh.html">Use phone number instead.</a></p>
+      <button id="register" type="button" class="btnn btn-secondary">Next</button>
+
+      <div class="in">
+        <p>
+          <hr> or
+          <hr>
+        </p>
+      </div>
+
+      <div class="hey">
+        <a
+          href="https://accounts.google.com/v3/signin/identifier?dsh=S436238257%3A1684820681363323&authuser=0&continue=https%3A%2F%2Fwww.google.com%2F&ec=GAlAmgQ&hl=en&flowName=GlifWebSignIn&flowEntry=AddSession"><button
+            class="btn3" type="button" name="button"><i class="fa-brands fa-google"></i> Continue with
+            Google</button></a>
+        <a href="https://www.facebook.com"><button class="btn1" type="button" name="button"><i
+              class="fa-brands fa-facebook"></i> Continue with Facebook</button></a>
+        <a href="https://appleid.apple.com/sign-in"><button class="btn2" type="button" name="button"><i
+              class="fa-brands fa-apple"></i> Continue with Apple</button></a>
+      </div>
+      <hr>
+      <div class="end">
+        <p class="grey">Already have an account ?<a href="loginAP.html" class="spa"> Login Here</a></p><br>
+
+      </div>
+      <div class="end2">
+        <p class=" grey">This site is protected by reCAPTCHA and the Google <br><a
+            href="https://policies.google.com/privacy">Privacy Policy</a>
+          and <a href="https://policies.google.com/terms">Terms of Service apply</a>.
+          apply.</p>
+      </div>
+
+
+    </div>
+
+
+
+    <script type="text/javascript">
+
+
+      $("#register").click(function () {
+        var name = $("#email").val();
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (name == '') {
+          swal({
+            icon: 'error',
+            title: 'Error',
+            text: 'Please enter your email',
+            background: 'grey',
+            button: "ok",
+          });
+
+        }
+        else if (!filter.test(name)) {
+          swal("Invalid !", "Kindly enter a Valid email address", "error")
+
+        }
+        else {
+          swal("Done!", "An email has been sent to verify and to set Password", "success").then(function () {
+            window.location = "loginAP.html";
+          });
+        }
+      });
+    </script>
+  </body>
+
+</html>

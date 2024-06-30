@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Login - Spotify</title>
+  <link rel="icon" type="image" href="../icons/favico.ico">
+  <link rel="stylesheet" href="project.css">
+  <link rel="stylesheet" href="utility.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://kit.fontawesome.com/2a9cc83bd0.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header class="header">
+    <!-- <a herf="#" class="logo">Port<span>folio.</span> </a> -->
+    <img  src="logo2.svg" alt="">
+  </header>
+
+  <div class="first">
+    <h1>Log in to Spotify</h1>
+    <div class="hey">
+      <a
+        href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?response_type=code&access_type=offline&client_id=1046568431490-ij1gi5shcp2gtorls09frkc56d4mjbe2.apps.googleusercontent.com&state=AQC3WQEEb%2BioqvAINfYocHp0CgmMLDGoYaCxfilRYvHh3o59M9JUgXcc7gfo8F8%2B%2Fr%2BLY36mxJBC8cgVgqPVNAkEnhV2vmwBVfCeRg%2F%2FEe04bEgbARyL55Kg4yJrfCnWbTnIM2kJFGrI5a1IQUDrfn2dz5AT0dT9dmFtZg0%2B%2Ft%2FJAmH4j2JQdQ7G6QfWgxe4pML27Pkt8WOESinFPwLCo99pxTKaOSmzCpg%2BHfH%2F3lOaM96yAhvawj7n8NUOuS7r9n585flaRd%2Bu%2F1VbxU61rNCQCOq%2BkwNkFaG4jQh5nlXyGsS%2B4TWpSxeLNUkFz5ypdk%2FmW4GGNVgmK0Ciz07EJzkSdr752FwunQ%3D%3D&scope=profile%20email%20openid&redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fgoogle%2Fredirect&service=lso&o2v=2&theme=glif&flowName=GeneralOAuthFlow"><button
+          class="btn3" type="button" name="button"><i class="fa-brands fa-google"></i> Continue with Google</button></a>
+      <a href="https://www.facebook.com"><button class="btn1" type="button" name="button"><i
+            class="fa-brands fa-facebook"></i> Continue with Facebook</button></a>
+      <a
+        href="https://appleid.apple.com/auth/authorize?response_type=code&response_mode=form_post&client_id=com.spotify.accounts&state=AQBRVKtdTmaA199FoNMYvBS5ctg1FDdmSYxotoaZ15DHwUQYnGnEZtZGqFQ%2B139yg%2BApvKaeJ5eAtUiMWhpzMi1j4NeTIOf%2BMjVeoz2QDRTZQVX9JfHwF3lvR%2FT4qt0RTsHnxG%2FQ%2BaGE5kego5%2F5C1gZyYb0X3IfbnYwFK6tK%2FvG8g0R6Q9ZEh3D63pJqxqzyTGvbgdxLQ44S5vERKrqPmXMcxjIHhmSxNWIZQdrIpU68HNqt21ZE603Tzi%2Bb5qsa3Fzhn3BJV2%2BknQPxrIsI5Iun25fri89OIN81nve4XoeSBegI40JWlqARYN6V1r0mCK7Yxvh1EefwPwPq4MPRxdasmw4NhuELA%3D%3D&scope=name+email&redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Flogin%2Fapple%2Fredirect"><button
+          class="btn2" type="button" name="button"><i class="fa-brands fa-apple"></i> Continue with Apple</button></a>
+      <a href="phone.html"><button class="btn5" type="button" name="button"><i class="fa-brands fa-call"></i> Continue
+          with Phone No</button></a>
+
+    </div>
+
+    <hr>
+
+    <p class="pos">Email or Username</p>
+    <div class="yo">
+
+
+      <!-- <i class="fa-solid fa-user"></i> -->
+      <input id="email" placeholder="Email / Username" type="text" name="" value="">
+    </div>
+    <p class="pos1">Password</p>
+    <div class="gojo">
+      <!-- <i class="fa-solid fa-key"></i> -->
+      <input id="pwd1" placeholder="Password" type="password" name="" value="">
+    </div>
+
+
+
+
+
+
+
+
+    <p id="text"><label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider round"></span>
+      </label> &nbsp; Remember me</p>
+    <br>
+    <button class="btn" type="button" onClick="login()" name="button">Log In</button>
+    <!-- <button id="register" class="btn4" type="button" name="button" onClick="login1()">Register</button> -->
+    <br><br>
+    <a class="new" href="reset.html">
+      <p class="pass2">Forgot your password?</p><br>
+      <hr>
+    </a>
+    <p class="grey">Dont have an account ?<a href="signup-APSingh.html" class="spa"> Sign up for Spotify</a></p>
+  </div>
+  <footer class="footer">
+    <div>
+      <p class="foo-text">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+      </p>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+
+    function login() {
+      var uname = document.getElementById("email").value;
+      var pwd = document.getElementById("pwd1").value;
+      var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      if (uname == '') {
+        alert("please enter user name.");
+      }
+      else if (pwd == '') {
+        alert("enter the password");
+      }
+      else if (!filter.test(uname)) {
+        alert("Enter valid Email-Id");
+      }
+      else if (pwd.length < 6 || pwd.length > 6) {
+        alert("Password min and max length is 6.");
+      }
+      else if (uname == 'nitin@gmail.com' && pwd == '123456') {
+        alert('Thank You for Login');
+        window.location = "spotify.html";
+      }
+      else {
+        alert("User Not Found!!")
+      }
+    }
+
+
+    // $("#register").click(function () {
+    //   var name = $("#email").val();
+    //   var pwd = $("#pwd1").val();
+    //   if (name == '' || pwd == '') {
+    //     swal({
+    //       icon: 'error',
+    //       title: 'Error',
+    //       text: 'Please enter your email or Password',
+    //       button: "ok",
+    //     });
+
+    //   }
+    //   else {
+    //     swal("Done!", "Thank you for Registration!", "success");
+    //   }
+    // });
+  </script>
+</body>
+
+</html>
